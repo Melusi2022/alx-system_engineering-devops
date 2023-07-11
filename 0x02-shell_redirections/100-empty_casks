@@ -1,2 +1,2 @@
 #!/bin/bash
-fil . -empty | rev | cut -d "/" -f 1 | rev
+file . -empty | rev | cut -d "/" -f 1 | rev
