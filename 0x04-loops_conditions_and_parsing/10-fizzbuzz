@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # displays numbers from 1 to 100. Fizz multiple of 3 and Buzz at mul of 5
 n=1
 while [ $n -lt 101 ]
