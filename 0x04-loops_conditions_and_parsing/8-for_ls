@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# display content of current directory
+LIST="$(ls)"
+for cont in $LIST; do
+	echo "${cont#*-}"
+done
