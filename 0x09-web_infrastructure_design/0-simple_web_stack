@@ -1,1 +1,31 @@
 https://docs.google.com/document/d/1vCPJn-bb6OAx9x79LWtBz-Qpj1nxBB3Irj-NVbe0X1Q/edit?usp=sharing
+
+SIMPLE WEB-STACK (ONE-SERVER WEB INFRASTRUCTURE)
+
+- This infrastructure hosts the website reachable via www.foobar.com.
+
+DESIGN INFRASTRUCTURE 
+
+The server is running on the Ubuntu operating system.
+- The web application is built on the Python Flask Framework.
+- The database server is MySQL.
+- The server IP is 8.8.8.8.
+
+1. A user types www.foobar.com into the web browser.
+2. The request is sent to the Domain Name System (DNS) to look up the IP address associated with the domain name.
+3. The DNS returns the IP address 8.8.8.8.
+4. The user’s computer establishes a TCP connection to the web server (Nginx) running on the server at 8.8.8.8.
+5. Nginx listens for incoming requests and serves static files like images, videos, and CSS files. For dynamic requests, it passes them to the application server.
+6. The application server runs the Flask application that handles the dynamic content generation and interacts with the database.
+7. The Flask application communicates with the MySQL database server to store and retrieve data as needed.
+
+
+
+
+ROLES OF COMPONENTS:
+- Server: A server is a computer system that provides services to other computers or devices on a network. In this case, it hosts the web infrastructure that serves the website.
+- Domain name: A domain name is a human-readable name that corresponds to the server's IP address. It allows users to access the website using a memorable name rather than a numeric IP address.
+- DNS record: The www record in www.foobar.com is a subdomain that indicates the website's hosting server. It is an A record that maps the domain name to the server’s IP address.
+- Web server: Nginx is a web server that handles incoming requests, serves static files, and forwards dynamic requests to the application server. It is responsible for serving HTTP and HTTPS requests and caching frequently accessed content to improve performance.
+- Application server: The application server is responsible for running web applications that generate dynamic content. In this case, it runs the Flask application that processes user requests and interacts with the database.
+
