@@ -1,0 +1,26 @@
+https://docs.google.com/document/d/11tAG8F2Jq4MGx_t6aXFm3c5B--JX9NKvmMyh2DB82VU/edit?usp=sharing
+
+Distributed web infrastructure(three server web infrastructure)
+
+Design of Three-Server Web Infrastructure for www.foobar.com:
+1. Web Server (Nginx):
+- One of the two servers will act as a web server running Nginx, which will handle incoming web requests and serve static files. Nginx is a high-performance web server and reverse proxy, it is lightweight and can handle a large number of concurrent connections.
+2. Application Server:
+- The second server will act as an application server, running the application codebase. The application server will process dynamic requests from the web server, and perform all business logic and data access.
+3. Load Balancer (HAproxy):
+- You will add HAproxy as a load balancer to distribute incoming traffic between the two servers. HAproxy is a reliable and fast TCP/HTTP load balancer, it can balance traffic between different types of servers based on different algorithms.
+4. MySQL Database:
+- You will use MySQL as your database server, which will store all the application data.
+5. Set of Application Files:
+The code base will be deployed on the application server, which will be responsible for processing incoming requests.
+
+Specifics about this infrastructure:
+1. Nginx: You are adding Nginx as a web server because it is a high-performance server that can handle a large number of concurrent connections. It can also serve static files efficiently.
+2. Application Server: The application server is added to run the application code base and perform all business logic and data access.
+3. HAproxy: You are adding HAproxy as a load balancer because it can balance traffic between different types of servers based on different algorithms. The load balancer will distribute traffic evenly between the two servers.
+4. MySQL: MySQL is added as the database server because it is a widely used and reliable open-source database management system that supports relational database management. It can also handle a large number of concurrent connections.
+5. Set of Application Files: The application files will be deployed on the application server, which will be responsible for processing incoming requests.
+
+Load Balancer Configuration and Distribution Algorithm:
+You will configure HAproxy with a round-robin distribution algorithm. The round-robin algorithm is a simple and effective way to distribute traffic evenly between the two servers. HAproxy will send incoming requests to the next available server in a circular order.
+
